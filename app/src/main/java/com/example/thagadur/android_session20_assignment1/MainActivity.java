@@ -12,6 +12,7 @@ import android.provider.ContactsContract.Data;
 import android.provider.ContactsContract.RawContacts;
 import android.view.Menu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -47,6 +48,7 @@ public class MainActivity extends Activity {
         try {
             getApplicationContext().getContentResolver().
                     applyBatch(ContactsContract.AUTHORITY, contentProviderOperations);
+            Toast.makeText(this, "Contact has been added successfully", Toast.LENGTH_SHORT).show();
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (OperationApplicationException e) {
