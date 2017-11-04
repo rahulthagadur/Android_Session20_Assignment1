@@ -4,11 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D1C4E9"
-    tools:context="com.example.thagadur.android_session20_assignment1.MainActivity" >
+    tools:context="com.example.thagadur.android_session20_assignment1.MainActivity">
+    <!--Text to display that the Contact has been Added -->
     <TextView
+        android:id="@+id/print"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="30sp"
-        android:id="@+id/print"/>
+        android:textSize="30sp" />
 </RelativeLayout>

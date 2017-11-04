@@ -18,17 +18,19 @@ import java.util.ArrayList;
 public class MainActivity extends Activity {
     //Contact to be stored is entered to string array
     private String[] names = {"ravindra", "babu", "ravulla"};
-    private String[] numbers = {"9876543211","1234567899","4561237891"};
+    private String[] numbers = {"9876543211", "1234567899", "4561237891"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        for(int i=0; i< names.length;i++){
+        for (int i = 0; i < names.length; i++) {
             writeContact(names[i], numbers[i]);
         }
-        TextView view = (TextView)findViewById(R.id.print);
+        TextView view = (TextView) findViewById(R.id.print);
         view.setText("Contact has been successfully saved........");
     }
+
     private void writeContact(String displayName, String number) {
         ArrayList<ContentProviderOperation> contentProviderOperations = new ArrayList<ContentProviderOperation>();
         //insert raw contact using RawContacts.CONTENT_URI
@@ -51,10 +53,12 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
     }
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return true;
