@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends Activity {
     //Contact to be stored is entered to string array
-    private String[] names = {"ravindra", "babu", "ravulla"};
+    private String[] names = {"tagadur", "aa", "bb"};
     private String[] numbers = {"9876543211", "1234567899", "4561237891"};
 
     @Override
